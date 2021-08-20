@@ -4,7 +4,8 @@ const connectDB = require('./config/db')
 const colors = require('colors');
 const errorMiddleware = require('./middleware/errorMiddleware')
 const productRoutes = require('./Routes/productRoutes')
-const path =require('path')
+const path = require('path')
+const userRoutes = require('./Routes/userRoutes')
 
 const notFound = errorMiddleware.notFound;
 const ErrorHandler= errorMiddleware.ErrorHandler;
@@ -13,7 +14,10 @@ dotenv.config();
 connectDB();
 const app = express();
 
+app.use(express.json())
+
 app.use('/api/products', productRoutes)
+app.use('/api/users', userRoutes)
 
 __dirname = path.resolve()
 
