@@ -1,6 +1,6 @@
 {
   "name": "frontend",
-  "proxy": "web-production-99b1.up.railway.app",
+  "proxy": "https://web-production-99b1.up.railway.app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
